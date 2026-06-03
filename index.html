@@ -8,7 +8,127 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    :root{
+      --bg:#071015;
+      --panel:#0c1b21;
+      --panel2:#0f2329;
+      --text:#e9f6f7;
+      --muted:#9bc4c9;
+      --accent:#22d3c5;
+      --accent2:#0ea5a4;
+      --border:rgba(34,211,197,.18);
+      --shadow:0 18px 60px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,sans-serif;
+      background:radial-gradient(circle at top,#10343b 0,#071015 45%,#050b0e 100%);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .bg-grid{
+      position:fixed;inset:0;
+      background-image:linear-gradient(rgba(34,211,197,.05) 1px,transparent 1px),
+                       linear-gradient(90deg,rgba(34,211,197,.05) 1px,transparent 1px);
+      background-size:48px 48px;
+      pointer-events:none;opacity:.35;
+    }
+    .nav-wrap{position:sticky;top:0;z-index:50;padding:18px 20px;backdrop-filter:blur(18px)}
+    .nav{
+      max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;
+      padding:14px 18px;border:1px solid var(--border);background:rgba(7,16,21,.65);
+      border-radius:20px;box-shadow:var(--shadow);position:relative;
+    }
+    .brand{font-weight:800;letter-spacing:.12em}
+    .nav-links{display:flex;gap:22px;color:var(--muted)}
+    .nav-links a:hover{color:var(--text)}
+    .nav-toggle{display:none;background:transparent;border:0;color:var(--text);font-size:24px}
+    .hero,.section{max-width:1180px;margin:0 auto;padding:84px 20px}
+    .hero{
+      min-height:86vh;display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center
+    }
+    .eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.18em;font-size:.8rem}
+    .hero h1{font-size:clamp(3rem,8vw,6.2rem);line-height:.92;margin:.2em 0}
+    .lead{max-width:62ch;color:var(--muted);font-size:1.08rem;line-height:1.8}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin:30px 0}
+    .btn{
+      padding:14px 20px;border-radius:999px;border:1px solid var(--border);font-weight:700;
+      display:inline-flex;align-items:center;justify-content:center
+    }
+    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#041012}
+    .btn-secondary{background:rgba(255,255,255,.03)}
+    .hero-meta{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted)}
+    .hero-meta span,.card,.panel{
+      border:1px solid var(--border);background:rgba(12,27,33,.68);box-shadow:var(--shadow)
+    }
+    .hero-meta span,.card{padding:12px 16px;border-radius:16px}
+    .hero-card{
+      position:relative;min-height:520px;border-radius:32px;padding:28px;display:grid;gap:18px;
+      align-content:end;overflow:hidden;border:1px solid var(--border);
+      background:linear-gradient(180deg,rgba(14,31,38,.75),rgba(5,11,14,.88))
+    }
+    .avatar-ring{
+      position:absolute;inset:50px 50px auto auto;width:220px;height:220px;border-radius:50%;
+      border:1px solid rgba(34,211,197,.45);
+      box-shadow:0 0 0 26px rgba(34,211,197,.08),0 0 120px rgba(34,211,197,.12)
+    }
+    .hero-stat{
+      position:relative;padding:20px;border-radius:20px;background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.06)
+    }
+    .hero-stat strong{display:block;font-size:1.7rem;margin-bottom:4px}
+    .section h2{font-size:2rem;margin-bottom:18px}
+    .panel{padding:24px;border-radius:24px;color:var(--muted);line-height:1.8}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .cards .card{text-align:center;font-weight:700;color:var(--text)}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .project-link{display:block;text-decoration:none}
+    .project-link .card{transition:transform .25s ease,border-color .25s ease,background .25s ease}
+    .project-link:hover .card{
+      transform:translateY(-6px);border-color:rgba(34,211,197,.45);background:rgba(15,35,41,.9)
+    }
+    .project-btn{display:inline-block;margin-top:14px;color:var(--accent);font-weight:700}
+    .project h3,.timeline h3{color:var(--text)}
+    .timeline{display:grid;gap:14px;border-left:1px solid var(--border);padding-left:18px}
+    .timeline-item{padding:18px 0 18px 18px;position:relative}
+    .timeline-item::before{
+      content:'';position:absolute;left:-7px;top:24px;width:12px;height:12px;border-radius:50%;
+      background:var(--accent);box-shadow:0 0 0 6px rgba(34,211,197,.15)
+    }
+    .timeline-item span{font-size:.85rem;color:var(--accent)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .form{display:grid;gap:12px}
+    .form input,.form textarea{
+      width:100%;padding:14px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.08);
+      background:#071318;color:var(--text);font:inherit
+    }
+    .reveal{animation:fadeUp .8s ease both}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    @media (max-width:960px){
+      .hero,.projects,.contact-grid{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .nav-toggle{display:block}
+      .nav-links{
+        display:none;position:absolute;left:20px;right:20px;top:74px;padding:18px;border-radius:18px;
+        background:rgba(7,16,21,.96);flex-direction:column
+      }
+      .nav-links.show{display:flex}
+    }
+    @media (max-width:640px){
+      .hero{padding-top:50px}
+      .grid{grid-template-columns:1fr}
+      .hero-card{min-height:360px}
+      .hero h1{font-size:3.4rem}
+    }
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .reveal{animation:none}
+      .btn,*{transition:none !important}
+    }
+  </style>
 </head>
 <body>
   <div class="bg-grid"></div>
@@ -16,7 +136,6 @@
   <header class="nav-wrap">
     <nav class="nav">
       <a class="brand" href="#home">LALID S</a>
-
       <div class="nav-links" id="navLinks">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -25,7 +144,6 @@
         <a href="#certs">Certifications</a>
         <a href="#contact">Contact</a>
       </div>
-
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
     </nav>
   </header>
@@ -35,15 +153,12 @@
       <div class="hero-copy reveal">
         <p class="eyebrow">AI & Data Science Engineer</p>
         <h1>LALID S</h1>
-        <p class="lead">
-          Building intelligent solutions with machine learning, data science, and AI-powered web applications.
-        </p>
-
-      <div class="hero-actions">
+        <p class="lead">Building intelligent solutions with machine learning, data science, and AI-powered web applications.</p>
+        <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">View Projects</a>
-          
+          <a class="btn btn-secondary" href="assets/LALID_S_Resume.pdf" target="_blank">View Resume</a>
+          <a class="btn btn-secondary" href="assets/LALID_S_Resume.pdf" download>Download Resume</a>
         </div>
-
         <div class="hero-meta">
           <span>B.Tech AI & DS</span>
           <span>CGPA 7.84</span>
@@ -53,96 +168,87 @@
 
       <div class="hero-card reveal">
         <div class="avatar-ring"></div>
-        <div class="hero-stat">
-          <strong>5+</strong>
-          <span>Featured Projects</span>
-        </div>
-        <div class="hero-stat">
-          <strong>ML</strong>
-          <span>NLP • Flask • React</span>
-        </div>
-        <div class="hero-stat">
-          <strong>Focus</strong>
-          <span>Data Analysis & AI Apps</span>
-        </div>
+        <div class="hero-stat"><strong>5+</strong><span>Featured Projects</span></div>
+        <div class="hero-stat"><strong>ML</strong><span>NLP • Flask • React</span></div>
+        <div class="hero-stat"><strong>Focus</strong><span>Data Analysis & AI Apps</span></div>
       </div>
     </section>
 
     <section class="section reveal" id="about">
       <h2>About</h2>
       <div class="panel">
-        <p>
-          A highly motivated B.Tech student specialising in Artificial Intelligence and Data Science at Bannari Amman Institute of Technology, with hands-on experience in sentiment analysis, NLP, predictive modelling, and full-stack AI applications.
-        </p>
-        <p>
-          Career goal: Data Scientist / AI Engineer. Interested in data analysis, visualisation, machine learning, and AI-powered decision support systems. Planning to pursue a Master's in Australia.
-        </p>
+        <p>A highly motivated B.Tech student specialising in Artificial Intelligence and Data Science at Bannari Amman Institute of Technology, with hands-on experience in sentiment analysis, NLP, predictive modelling, and full-stack AI applications.</p>
+        <p>Career goal: Data Scientist / AI Engineer. Interested in data analysis, visualisation, machine learning, and AI-powered decision support systems. Planning to pursue a Master's in Australia.</p>
       </div>
     </section>
 
     <section class="section reveal" id="skills">
       <h2>Skills</h2>
       <div class="grid cards">
-        <div class="card">Python</div>
-        <div class="card">R</div>
-        <div class="card">Machine Learning</div>
-        <div class="card">NLP</div>
-        <div class="card">Flask</div>
-        <div class="card">React</div>
-        <div class="card">Pandas</div>
-        <div class="card">Scikit-learn</div>
-        <div class="card">NumPy</div>
-        <div class="card">Matplotlib</div>
-        <div class="card">Seaborn</div>
-        <div class="card">Git</div>
+        <div class="card">Python</div><div class="card">R</div><div class="card">Machine Learning</div><div class="card">NLP</div>
+        <div class="card">Flask</div><div class="card">React</div><div class="card">Pandas</div><div class="card">Scikit-learn</div>
+        <div class="card">NumPy</div><div class="card">Matplotlib</div><div class="card">Seaborn</div><div class="card">Git</div>
       </div>
     </section>
 
     <section class="section reveal" id="projects">
       <h2>Featured Projects</h2>
       <div class="projects">
-        <article class="project card">
-          <h3>Neethi</h3>
-          <p>Legal information platform built with Python backend and React frontend to make legal knowledge more accessible.</p>
-        </article>
+        <a class="project-link" href="https://github.com/yourusername/neethi" target="_blank" rel="noreferrer">
+          <article class="project card">
+            <h3>Neethi</h3>
+            <p>Legal information platform built with Python backend and React frontend to make legal knowledge more accessible.</p>
+            <span class="project-btn">View on GitHub</span>
+          </article>
+        </a>
 
-        <article class="project card">
-          <h3>AI Student Quiz Application</h3>
-          <p>Adaptive quiz app with performance analytics, voice-based interaction, and intelligent question handling.</p>
-        </article>
+        <a class="project-link" href="https://github.com/yourusername/ai-student-quiz" target="_blank" rel="noreferrer">
+          <article class="project card">
+            <h3>AI Student Quiz Application</h3>
+            <p>Adaptive quiz app with performance analytics, voice-based interaction, and intelligent question handling.</p>
+            <span class="project-btn">View on GitHub</span>
+          </article>
+        </a>
 
-        <article class="project card">
-          <h3>Sentiment Analysis</h3>
-          <p>Text classification app using TF-IDF, Naive Bayes, SVM, and Random Forest deployed as a web API.</p>
-        </article>
+        <a class="project-link" href="https://github.com/yourusername/sentiment-analysis" target="_blank" rel="noreferrer">
+          <article class="project card">
+            <h3>Sentiment Analysis</h3>
+            <p>Text classification app using TF-IDF, Naive Bayes, SVM, and Random Forest deployed as a web API.</p>
+            <span class="project-btn">View on GitHub</span>
+          </article>
+        </a>
 
-        <article class="project card">
-          <h3>AI Story Teller</h3>
-          <p>NLP-driven story generator designed for creative storytelling from user prompts.</p>
-        </article>
+        <a class="project-link" href="https://github.com/yourusername/ai-story-teller" target="_blank" rel="noreferrer">
+          <article class="project card">
+            <h3>AI Story Teller</h3>
+            <p>NLP-driven story generator designed for creative storytelling from user prompts.</p>
+            <span class="project-btn">View on GitHub</span>
+          </article>
+        </a>
 
-        <article class="project card">
-          <h3>Virtual Painter</h3>
-          <p>Hand-gesture drawing app using OpenCV and MediaPipe with colour and brush controls.</p>
-        </article>
+        <a class="project-link" href="https://github.com/yourusername/virtual-painter" target="_blank" rel="noreferrer">
+          <article class="project card">
+            <h3>Virtual Painter</h3>
+            <p>Hand-gesture drawing app using OpenCV and MediaPipe with colour and brush controls.</p>
+            <span class="project-btn">View on GitHub</span>
+          </article>
+        </a>
       </div>
     </section>
 
     <section class="section reveal" id="timeline">
-      <h2> Education </h2>
+      <h2>Experience & Education</h2>
       <div class="timeline">
         <div class="timeline-item">
           <span>2023 - 2026</span>
           <h3>Bannari Amman Institute of Technology</h3>
           <p>B.Tech Artificial Intelligence and Data Science, CGPA 7.84.</p>
         </div>
-
         <div class="timeline-item">
           <span>2019 - 2023</span>
           <h3>CIT Sandwich Polytechnic College</h3>
           <p>Diploma in Mechanical Engineering, Sandwich, 95.</p>
         </div>
-
         <div class="timeline-item">
           <span>2018</span>
           <h3>Vidya Vikas International CBSE School</h3>
@@ -167,13 +273,26 @@
         <div class="panel">
           <p>Email: <a href="mailto:lalidsundarasamy6@gmail.com">lalidsundarasamy6@gmail.com</a></p>
           <p>Phone: +91 9790448587</p>
-          <p>GitHub: <a href="https://github.com/" target="_blank" rel="noreferrer">LALID</a></p>
-          <p>LinkedIn: <a href="https://linkedin.com/" target="_blank" rel="noreferrer">LALID S</a></p>
+          <p>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">yourusername</a></p>
+          <p>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer">yourusername</a></p>
         </div>
+        <form class="panel form" action="https://formspree.io/f/your_form_id" method="POST">
+          <input name="name" type="text" placeholder="Your name" required />
+          <input name="email" type="email" placeholder="Your email" required />
+          <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
       </div>
     </section>
   </main>
 
-  <script src="js/script.js"></script>
+  <script>
+    const navToggle=document.getElementById('navToggle');
+    const navLinks=document.getElementById('navLinks');
+    navToggle?.addEventListener('click',()=>navLinks.classList.toggle('show'));
+    document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('show')));
+    const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('reveal')}),{threshold:.15});
+    document.querySelectorAll('.section,.hero-copy,.hero-card').forEach(el=>obs.observe(el));
+  </script>
 </body>
 </html>
