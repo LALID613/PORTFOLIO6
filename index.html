@@ -7,317 +7,339 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-<a href="#home" onclick="closeMenu()">Home</a>
-<a href="#about" onclick="closeMenu()">About</a>
-<a href="#skills" onclick="closeMenu()">Skills</a>
-<a href="#projects" onclick="closeMenu()">Projects</a>
-<a href="#timeline" onclick="closeMenu()">Education</a>
-<a href="#certs" onclick="closeMenu()">Certs</a>
-<a href="mailto:lalidsundarasamy6@gmail.com" onclick="closeMenu()" style="color:var(--accent);">Hire Me</a>
+  <a href="#home" onclick="closeMenu()">Home</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#projects" onclick="closeMenu()">Projects</a>
+  <a href="#timeline" onclick="closeMenu()">Education</a>
+  <a href="#certs" onclick="closeMenu()">Certs</a>
+  <a href="mailto:lalidsundarasamy6@gmail.com" onclick="closeMenu()" style="color:var(--accent);">Hire Me</a>
 </div>
 
+<!-- NAV -->
 <nav>
-<a href="#home" class="nav-logo">LALID<span>.</span>S</a>
-<ul class="nav-links">
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#timeline">Education</a></li>
-<li><a href="#certs">Certs</a></li>
-</ul>
-<div class="nav-right">
-<a href="mailto:lalidsundarasamy6@gmail.com" class="nav-cta">HIRE ME</a>
-<button class="hamburger" id="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
-<span></span><span></span><span></span>
-</button>
-</div>
+  <a href="#home" class="nav-logo">LALID<span>.</span>S</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#timeline">Education</a></li>
+    <li><a href="#certs">Certs</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="mailto:lalidsundarasamy6@gmail.com" class="nav-cta">HIRE ME</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
+<!-- HERO -->
 <section id="home">
-<svg class="hero-grid" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-<path d="M 30 0 L 0 0 0 30" fill="none" stroke="white" stroke-width="0.5"/>
-</pattern>
-</defs>
-<rect width="360" height="360" fill="url(#grid)"/>
-<circle cx="180" cy="180" r="120" stroke="#00e5b0" stroke-width="1" fill="none" opacity="0.3"/>
-<circle cx="180" cy="180" r="80" stroke="#7b5cfa" stroke-width="1" fill="none" opacity="0.2"/>
-<circle cx="180" cy="180" r="40" stroke="#00e5b0" stroke-width="2" fill="none" opacity="0.5"/>
-</svg>
-<div class="hero-eyebrow fade-up">Available for AI/DS Roles</div>
-<h1 class="hero-name fade-up delay-1"><span class="dim">LAL</span><span class="accent">ID</span><br/><span class="dim">S</span></h1>
-<p class="hero-title fade-up delay-2">AI &amp; Data Science Engineer</p>
-<p class="hero-desc fade-up delay-2">B.Tech student in AI &amp; DS building intelligent solutions — from NLP pipelines and predictive models to full-stack AI-powered web applications.</p>
-<div class="hero-badges fade-up delay-3">
-<span class="badge badge-green">Machine Learning</span>
-<span class="badge badge-purple">NLP</span>
-<span class="badge badge-green">Flask &amp; React</span>
-<span class="badge badge-orange">OpenCV</span>
-<span class="badge badge-purple">Scikit-learn</span>
-<span class="badge badge-green">Data Analysis</span>
-</div>
-<div class="hero-actions fade-up delay-4">
-<a href="#projects" class="btn-primary">View Projects</a>
-</div>
-<div class="hero-stats fade-up delay-4">
-<div>
-<div class="stat-num">3<span>+</span></div>
-<div class="stat-label">GitHub Projects</div>
-</div>
-<div>
-<div class="stat-num">7<span>.</span>84</div>
-<div class="stat-label">CGPA · B.Tech</div>
-</div>
-<div>
-<div class="stat-num">95<span>%</span></div>
-<div class="stat-label">Diploma Score</div>
-</div>
-</div>
+  <svg class="hero-grid" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+        <path d="M 30 0 L 0 0 0 30" fill="none" stroke="white" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="360" height="360" fill="url(#grid)"/>
+    <circle cx="180" cy="180" r="120" stroke="#00e5b0" stroke-width="1" fill="none" opacity="0.3"/>
+    <circle cx="180" cy="180" r="80" stroke="#7b5cfa" stroke-width="1" fill="none" opacity="0.2"/>
+    <circle cx="180" cy="180" r="40" stroke="#00e5b0" stroke-width="2" fill="none" opacity="0.5"/>
+  </svg>
+
+  <div class="hero-eyebrow fade-up">Available for AI/DS Roles</div>
+  <h1 class="hero-name fade-up delay-1"><span class="dim">LAL</span><span class="accent">ID</span><br/><span class="dim">S</span></h1>
+  <p class="hero-title fade-up delay-2">AI &amp; Data Science Engineer</p>
+  <p class="hero-desc fade-up delay-2">B.Tech student in AI &amp; DS building intelligent solutions — from NLP pipelines and predictive models to full-stack AI-powered web applications.</p>
+  <div class="hero-badges fade-up delay-3">
+    <span class="badge badge-green">Machine Learning</span>
+    <span class="badge badge-purple">NLP</span>
+    <span class="badge badge-green">Flask &amp; React</span>
+    <span class="badge badge-orange">OpenCV</span>
+    <span class="badge badge-purple">Scikit-learn</span>
+    <span class="badge badge-green">Data Analysis</span>
+  </div>
+  <div class="hero-actions fade-up delay-4">
+    <a href="#projects" class="btn-primary">View Projects</a>
+  </div>
+  <div class="hero-stats fade-up delay-4">
+    <div>
+      <div class="stat-num">3<span>+</span></div>
+      <div class="stat-label">GitHub Projects</div>
+    </div>
+    <div>
+      <div class="stat-num">7<span>.</span>84</div>
+      <div class="stat-label">CGPA · B.Tech</div>
+    </div>
+    <div>
+      <div class="stat-num">95<span>%</span></div>
+      <div class="stat-label">Diploma Score</div>
+    </div>
+  </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
-<div class="section-tag">About</div>
-<h2 class="section-title">Who I Am</h2>
-<div class="about-grid">
-<div class="about-text">
-<p>A highly motivated B.Tech student specialising in Artificial Intelligence and Data Science at Bannari Amman Institute of Technology, with hands-on experience in sentiment analysis, NLP, predictive modelling, and full-stack AI applications.</p>
-<p>My focus is on bridging the gap between complex AI systems and real-world usability — building tools that make intelligence accessible, not just impressive.</p>
-<p>Career goal: Data Scientist / AI Engineer. Planning to pursue a Master's in Australia to deepen research in AI-powered decision support systems.</p>
-</div>
-<div class="about-info">
-<div class="info-row">
-<span class="info-icon">EDU</span>
-<div class="info-content">
-<div class="info-label">INSTITUTION</div>
-<div class="info-value">Bannari Amman Institute of Technology</div>
-</div>
-</div>
-<div class="info-row">
-<span class="info-icon">DEG</span>
-<div class="info-content">
-<div class="info-label">DEGREE</div>
-<div class="info-value">B.Tech · Artificial Intelligence &amp; Data Science</div>
-</div>
-</div>
-<div class="info-row">
-<span class="info-icon">GPA</span>
-<div class="info-content">
-<div class="info-label">CGPA</div>
-<div class="info-value">7.84 / 10.0</div>
-</div>
-</div>
-<div class="info-row">
-<span class="info-icon">LOC</span>
-<div class="info-content">
-<div class="info-label">LOCATION</div>
-<div class="info-value">Tamil Nadu, India</div>
-</div>
-</div>
-<div class="info-row">
-<span class="info-icon">OPN</span>
-<div class="info-content">
-<div class="info-label">STATUS</div>
-<div class="info-value" style="color:var(--accent);">Open to AI/DS Roles &amp; Internships</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="section-tag">About</div>
+  <h2 class="section-title">Who I Am</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>A highly motivated B.Tech student specialising in Artificial Intelligence and Data Science at Bannari Amman Institute of Technology, with hands-on experience in sentiment analysis, NLP, predictive modelling, and full-stack AI applications.</p>
+      <p>My focus is on bridging the gap between complex AI systems and real-world usability — building tools that make intelligence accessible, not just impressive.</p>
+      <p>Career goal: Data Scientist / AI Engineer. Planning to pursue a Master's in Australia to deepen research in AI-powered decision support systems.</p>
+    </div>
+    <div class="about-info">
+      <div class="info-row">
+        <span class="info-icon">EDU</span>
+        <div class="info-content">
+          <div class="info-label">INSTITUTION</div>
+          <div class="info-value">Bannari Amman Institute of Technology</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">DEG</span>
+        <div class="info-content">
+          <div class="info-label">DEGREE</div>
+          <div class="info-value">B.Tech · Artificial Intelligence &amp; Data Science</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">GPA</span>
+        <div class="info-content">
+          <div class="info-label">CGPA</div>
+          <div class="info-value">7.84 / 10.0</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">LOC</span>
+        <div class="info-content">
+          <div class="info-label">LOCATION</div>
+          <div class="info-value">Tamil Nadu, India</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">OPN</span>
+        <div class="info-content">
+          <div class="info-label">STATUS</div>
+          <div class="info-value" style="color:var(--accent);">Open to AI/DS Roles &amp; Internships</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
-<div class="section-tag">Technical Skills</div>
-<h2 class="section-title">What I Work With</h2>
-<p class="section-sub">Core tools and technologies I use to build, analyse, and deploy AI solutions.</p>
-<div class="skills-grid" id="skillsGrid"></div>
+  <div class="section-tag">Technical Skills</div>
+  <h2 class="section-title">What I Work With</h2>
+  <p class="section-sub">Core tools and technologies I use to build, analyse, and deploy AI solutions.</p>
+  <div class="skills-grid" id="skillsGrid"></div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
-<div class="section-tag">Projects</div>
-<h2 class="section-title">Featured Work</h2>
-<p class="section-sub">AI and data science projects built with real-world impact in mind — click to view full source on GitHub.</p>
-<div class="projects-grid">
-<div class="project-card">
-<div class="project-num">01 — Legal Tech</div>
-<div class="project-title">Neethi</div>
-<p class="project-desc">Legal information platform with a Python backend and React frontend, designed to make legal knowledge accessible through NLP-powered search and plain-language explanations.</p>
-<div class="project-tags">
-<span class="tag">Python</span>
-<span class="tag">React</span>
-<span class="tag">NLP</span>
-<span class="tag">Flask</span>
-</div>
-<div class="project-footer">
-<a href="https://github.com/LALID613/Neethi" target="_blank" rel="noopener" class="project-gh-link">
-<svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-VIEW ON GITHUB
-</a>
-</div>
-</div>
-<div class="project-card">
-<div class="project-num">02 — EdTech AI</div>
-<div class="project-title">AI Student Quiz App</div>
-<p class="project-desc">Adaptive quiz application with performance analytics, voice-based interaction, and intelligent question handling that personalises difficulty based on student response patterns.</p>
-<div class="project-tags">
-<span class="tag">Python</span>
-<span class="tag">Voice API</span>
-<span class="tag tag-purple">Adaptive ML</span>
-<span class="tag">Analytics</span>
-</div>
-<div class="project-footer">
-<a href="https://github.com/LALID613/AI--Student-Quiz-App" target="_blank" rel="noopener" class="project-gh-link">
-<svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-VIEW ON GITHUB
-</a>
-</div>
-</div>
-<div class="project-card">
-<div class="project-num">03 — Generative AI</div>
-<div class="project-title">AI Story Teller</div>
-<p class="project-desc">NLP-driven creative story generator that builds coherent, engaging narratives from user-supplied prompts. Explores language generation and narrative structure modelling.</p>
-<div class="project-tags">
-<span class="tag">NLP</span>
-<span class="tag tag-purple">Text Gen</span>
-<span class="tag">Python</span>
-</div>
-<div class="project-footer">
-<a href="https://github.com/LALID613/AI--Story-Teller" target="_blank" rel="noopener" class="project-gh-link">
-<svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-VIEW ON GITHUB
-</a>
-</div>
-</div>
-</div>
+  <div class="section-tag">Projects</div>
+  <h2 class="section-title">Featured Work</h2>
+  <p class="section-sub">AI and data science projects built with real-world impact in mind — click to view full source on GitHub.</p>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-num">01 — Legal Tech</div>
+      <div class="project-title">Neethi</div>
+      <p class="project-desc">Legal information platform with a Python backend and React frontend, designed to make legal knowledge accessible through NLP-powered search and plain-language explanations.</p>
+      <div class="project-tags">
+        <span class="tag">Python</span>
+        <span class="tag">React</span>
+        <span class="tag">NLP</span>
+        <span class="tag">Flask</span>
+      </div>
+      <div class="project-footer">
+        <a href="https://github.com/LALID613/Neethi" target="_blank" rel="noopener" class="project-gh-link">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          VIEW ON GITHUB
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num">02 — EdTech AI</div>
+      <div class="project-title">AI Student Quiz App</div>
+      <p class="project-desc">Adaptive quiz application with performance analytics, voice-based interaction, and intelligent question handling that personalises difficulty based on student response patterns.</p>
+      <div class="project-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Voice API</span>
+        <span class="tag tag-purple">Adaptive ML</span>
+        <span class="tag">Analytics</span>
+      </div>
+      <div class="project-footer">
+        <a href="https://github.com/LALID613/AI--Student-Quiz-App" target="_blank" rel="noopener" class="project-gh-link">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          VIEW ON GITHUB
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num">03 — Generative AI</div>
+      <div class="project-title">AI Story Teller</div>
+      <p class="project-desc">NLP-driven creative story generator that builds coherent, engaging narratives from user-supplied prompts. Explores language generation and narrative structure modelling.</p>
+      <div class="project-tags">
+        <span class="tag">NLP</span>
+        <span class="tag tag-purple">Text Gen</span>
+        <span class="tag">Python</span>
+      </div>
+      <div class="project-footer">
+        <a href="https://github.com/LALID613/AI--Story-Teller" target="_blank" rel="noopener" class="project-gh-link">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          VIEW ON GITHUB
+        </a>
+      </div>
+    </div>
+
+  </div>
 </section>
 
+<!-- EDUCATION -->
 <section id="timeline">
-<div class="section-tag">Education</div>
-<h2 class="section-title">Academic Journey</h2>
-<p class="section-sub">From mechanical engineering foundations to artificial intelligence specialisation.</p>
-<div class="timeline">
-<div class="timeline-item">
-<div class="timeline-dot"></div>
-<div>
-<div class="timeline-period">2023 — 2026 · Current</div>
-<div class="timeline-school">Bannari Amman Institute of Technology</div>
-<div class="timeline-deg">B.Tech · Artificial Intelligence and Data Science</div>
-<div class="timeline-grade">CGPA 7.84</div>
-</div>
-</div>
-<div class="timeline-item">
-<div class="timeline-dot alt"></div>
-<div>
-<div class="timeline-period">2019 — 2023</div>
-<div class="timeline-school">CIT Sandwich Polytechnic College</div>
-<div class="timeline-deg">Diploma · Mechanical Engineering (Sandwich Program)</div>
-<div class="timeline-grade">95%</div>
-</div>
-</div>
-<div class="timeline-item">
-<div class="timeline-dot alt2"></div>
-<div>
-<div class="timeline-period">2018</div>
-<div class="timeline-school">Vidya Vikas International CBSE School</div>
-<div class="timeline-deg">Class X · CBSE Board</div>
-<div class="timeline-grade">64%</div>
-</div>
-</div>
-</div>
+  <div class="section-tag">Education</div>
+  <h2 class="section-title">Academic Journey</h2>
+  <p class="section-sub">From mechanical engineering foundations to artificial intelligence specialisation.</p>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="timeline-period">2023 — 2026 · Current</div>
+        <div class="timeline-school">Bannari Amman Institute of Technology</div>
+        <div class="timeline-deg">B.Tech · Artificial Intelligence and Data Science</div>
+        <div class="timeline-grade">CGPA 7.84</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot alt"></div>
+      <div>
+        <div class="timeline-period">2019 — 2023</div>
+        <div class="timeline-school">CIT Sandwich Polytechnic College</div>
+        <div class="timeline-deg">Diploma · Mechanical Engineering (Sandwich Program)</div>
+        <div class="timeline-grade">95%</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot alt2"></div>
+      <div>
+        <div class="timeline-period">2018</div>
+        <div class="timeline-school">Vidya Vikas International CBSE School</div>
+        <div class="timeline-deg">Class X · CBSE Board</div>
+        <div class="timeline-grade">64%</div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- CERTIFICATIONS -->
 <section id="certs">
-<div class="section-tag">Certifications</div>
-<h2 class="section-title">Credentials</h2>
-<p class="section-sub">Verified learning and professional experience.</p>
-<div class="certs-list">
-<div class="cert-item">
-<div class="cert-icon">
-<svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-</div>
-<div>
-<div class="cert-name">NPTEL — R Programming</div>
-<div class="cert-org">NATIONAL PROGRAMME ON TECHNOLOGY ENHANCED LEARNING · IIT</div>
-</div>
-</div>
-<div class="cert-item">
-<div class="cert-icon">
-<svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-</div>
-<div>
-<div class="cert-name">Industry Internship Certificates</div>
-<div class="cert-org">HANDS-ON EXPERIENCE · AI &amp; DATA SCIENCE APPLICATIONS</div>
-</div>
-</div>
-</div>
+  <div class="section-tag">Certifications</div>
+  <h2 class="section-title">Credentials</h2>
+  <p class="section-sub">Verified learning and professional experience.</p>
+  <div class="certs-list">
+    <div class="cert-item">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+      </div>
+      <div>
+        <div class="cert-name">NPTEL — R Programming</div>
+        <div class="cert-org">NATIONAL PROGRAMME ON TECHNOLOGY ENHANCED LEARNING · IIT</div>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+      </div>
+      <div>
+        <div class="cert-name">Industry Internship Certificates</div>
+        <div class="cert-org">HANDS-ON EXPERIENCE · AI &amp; DATA SCIENCE APPLICATIONS</div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-<span class="footer-copy">© 2025 LALID S · AI &amp; Data Science Engineer</span>
-<div style="display:flex;gap:2rem;">
-<a href="https://github.com/LALID613" target="_blank" class="footer-link">GitHub</a>
-<a href="https://www.linkedin.com/in/lalid-s-b6aa59290/" target="_blank" class="footer-link">LinkedIn</a>
-<a href="mailto:lalidsundarasamy6@gmail.com" class="footer-link">Email</a>
-</div>
+  <span class="footer-copy">© 2025 LALID S · AI &amp; Data Science Engineer</span>
+  <div style="display:flex;gap:2rem;">
+    <a href="https://github.com/LALID613" target="_blank" class="footer-link">GitHub</a>
+    <a href="https://www.linkedin.com/in/lalid-s-b6aa59290/" target="_blank" class="footer-link">LinkedIn</a>
+    <a href="mailto:lalidsundarasamy6@gmail.com" class="footer-link">Email</a>
+  </div>
 </footer>
 
 <script>
-function toggleMenu() {
-const menu = document.getElementById('mobileMenu');
-const btn = document.getElementById('hamburger');
-menu.classList.toggle('open');
-btn.classList.toggle('open');
-}
-function closeMenu() {
-document.getElementById('mobileMenu').classList.remove('open');
-document.getElementById('hamburger').classList.remove('open');
-}
-const skills = [
-{ name: 'Python', level: 90, label: 'Expert' },
-{ name: 'Machine Learning', level: 82, label: 'Advanced' },
-{ name: 'NLP', level: 78, label: 'Advanced' },
-{ name: 'Scikit-learn', level: 80, label: 'Advanced' },
-{ name: 'Flask', level: 75, label: 'Proficient' },
-{ name: 'React', level: 65, label: 'Proficient' },
-{ name: 'Pandas', level: 85, label: 'Advanced' },
-{ name: 'NumPy', level: 83, label: 'Advanced' },
-{ name: 'Matplotlib', level: 78, label: 'Proficient' },
-{ name: 'Seaborn', level: 72, label: 'Proficient' },
-{ name: 'OpenCV', level: 68, label: 'Proficient' },
-{ name: 'R', level: 60, label: 'Intermediate' },
-{ name: 'Git', level: 74, label: 'Proficient' },
-{ name: 'MediaPipe', level: 65, label: 'Proficient' },
-];
-const grid = document.getElementById('skillsGrid');
-skills.forEach(s => {
-const el = document.createElement('div');
-el.className = 'skill-item';
-el.innerHTML = `<div class="skill-name">${s.name}</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="${s.level}"></div></div><div class="skill-level">${s.label} · ${s.level}%</div>`;
-grid.appendChild(el);
-});
-const skillObserver = new IntersectionObserver((entries) => {
-entries.forEach(e => {
-if (e.isIntersecting) {
-e.target.querySelectorAll('.skill-bar-fill').forEach(bar => { bar.style.width = bar.dataset.width + '%'; });
-skillObserver.unobserve(e.target);
-}
-});
-}, { threshold: 0.2 });
-skillObserver.observe(grid);
-const navLinks = document.querySelectorAll('.nav-links a');
-const navObserver = new IntersectionObserver((entries) => {
-entries.forEach(e => {
-if (e.isIntersecting) {
-navLinks.forEach(l => l.classList.remove('active'));
-const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
-if (active) active.classList.add('active');
-}
-});
-}, { threshold: 0.4 });
-document.querySelectorAll('section[id]').forEach(s => navObserver.observe(s));
+  /* ---- MOBILE MENU ---- */
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.getElementById('hamburger');
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+
+  /* ---- SKILLS ---- */
+  const skills = [
+    { name: 'Python',           level: 90, label: 'Expert' },
+    { name: 'Machine Learning', level: 82, label: 'Advanced' },
+    { name: 'NLP',              level: 78, label: 'Advanced' },
+    { name: 'Scikit-learn',     level: 80, label: 'Advanced' },
+    { name: 'Flask',            level: 75, label: 'Proficient' },
+    { name: 'React',            level: 65, label: 'Proficient' },
+    { name: 'Pandas',           level: 85, label: 'Advanced' },
+    { name: 'NumPy',            level: 83, label: 'Advanced' },
+    { name: 'Matplotlib',       level: 78, label: 'Proficient' },
+    { name: 'Seaborn',          level: 72, label: 'Proficient' },
+    { name: 'OpenCV',           level: 68, label: 'Proficient' },
+    { name: 'R',                level: 60, label: 'Intermediate' },
+    { name: 'Git',              level: 74, label: 'Proficient' },
+    { name: 'MediaPipe',        level: 65, label: 'Proficient' },
+  ];
+
+  const grid = document.getElementById('skillsGrid');
+  skills.forEach(s => {
+    const el = document.createElement('div');
+    el.className = 'skill-item';
+    el.innerHTML = `<div class="skill-name">${s.name}</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="${s.level}"></div></div><div class="skill-level">${s.label} · ${s.level}%</div>`;
+    grid.appendChild(el);
+  });
+
+  const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.skill-bar-fill').forEach(bar => { bar.style.width = bar.dataset.width + '%'; });
+        skillObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  skillObserver.observe(grid);
+
+  /* ---- ACTIVE NAV ---- */
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('section[id]').forEach(s => navObserver.observe(s));
 </script>
 </body>
 </html>
